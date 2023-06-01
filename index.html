@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>converter</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>Currency converter online</h1>
+
+            <div class="main">
+                <div class="wrapper">
+                    <div class="tabs">
+                        <div class="tab active" data-tab="convert">
+                            <div class="tab_title_convert">
+                                Convert
+                            </div>
+                        </div>
+                        <div class="tab"  data-tab="single">
+                            <div class="tab_title">
+                                Single
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content show" data-child="convert">
+                        <form class="form">
+                            <div class="form_inputs">
+                                <div class="form_group">
+                                    <label for="amount">Amount</label>
+                                    <input type="number" name="amount" id="amount" placeholder="1.00" required>
+                                </div>
+                                
+                                <div class="form_selects"></div>
+                                    <div class="form_select">
+                                        <label for="from">From</label>
+                                        <select class="select" name="from" id="from" required>
+                                            <option value="" disabled selected hidden>
+                                                Choose currency
+                                            </option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form_select_icon switch_currencies">
+                                        <img src="cont1.png" alt="img1"> <!-- вставить картинку кнопки перевода валют -->
+                                    </div>
+
+                                    <div class="form_select">
+                                        <label for="to">To</label>
+                                        <select class="select" name="to" id="to" required>
+                                            <option value="" disabled selected hidden>
+                                                Choose currency
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                            
+
+                            <div class="form_info">
+                                <!-- <div class="loader">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div> -->
+
+                                <div class="form_results">
+                                    <div class="form_result_item from" id="resultFrom"></div>
+
+                                    <div class="form_result_equals">
+                                        <img src="eq.svg" alt=""> 
+                                    </div>
+                                    
+                                    <div class="form_result_item to" id="resultTo"></div>
+                                </div>
+
+                                <button type="submit" class="form_submit">Convert</button>
+
+                            </div>
+                            <div class="rate_information">
+                                <div class="rate_conversion"></div>
+                                <div class="rate_last"></div>
+                            </div>
+                        </div>
+                        </form>
+               
+                        <div class="content" data-child="single">
+                            <div class="currency_wrapper">
+                                <div class="currency_single">
+                                    <select class="select" id="singleSelect">
+                                        <option value="" disabled selected hidden>
+                                            Choose currency
+                                        </option>
+                                    </select>
+    
+                                    <div class="currency_single_item"></div>
+                                </div>
+                                <div class="currency_list"></div>
+                            </div>
+    
+                            <div class="currency_add">
+                                <button class="currency_add_button">
+                                    Add currency
+                                </button>
+    
+                                <select class="select" id="addCurrencySelect">
+                                    <option value="" disabled selected hidden>
+                                        Choose currency
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    <script type="module" src="index.js"></script>
+    <script type="module" src="events.js"></script>
+
+</body>
+</html>
